@@ -1,0 +1,818 @@
+/* *************************** GENERIC STUFF *************************** */
+
+html {
+  scroll-behavior: smooth;
+	height: 100%;
+}
+.navbar{
+  position: sticky;
+  top:0;
+  z-index: 5;
+}
+
+/* Navbar styling */
+.cihkkG {
+  width: 100% !important;
+  padding: 10px 0px !important;
+}
+
+
+.admin-container,
+.navbar,
+.list-table {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.data-collected{
+  box-sizing: border-box;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #444;
+}
+/* ............................... */
+/* Page In General */
+.data-collected .data-text{
+  font-size:x-small;
+}
+
+h2 {
+  text-align: center;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  height: 100%;
+}
+
+/* Page Top */
+
+.admin-logo {
+  height: 60px; 
+  margin-top: 0px;
+  position: relative;
+	left: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  .admin-logo {
+    height: 40px;
+    padding: 0 0 0 10px;
+  }
+
+  .navbar h1 {
+    font-size: 1.1rem;
+    padding: 0;
+    width: 110px !important;
+  }
+
+  .admin-container-title-and-logo {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.admin-container-title-and-logo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.admin-container-title-and-logo h1 {
+  color: white;
+  width: 170px;
+}
+
+.admin-container-top {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 20px 0px 20px;
+  align-items: flex-end;
+}
+
+/* Page Bottom */
+.admin-container-bottom {
+  padding: 20px;
+  background-color: #e4e4e4;
+  margin: 0px;
+  border-radius: 0 0 5px 5px;
+  min-height: 100vh;
+  color: #444;
+}
+
+/* Buttons and Input */
+.side-border-line input {
+  border: 1px solid #444;
+}
+
+.admin-container input,
+.admin-container button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.checkbox-editable,
+.radio-editable {
+  display: flex;
+  margin: 5px;
+}
+
+.admin-container .questionText input {
+  width: 98%;
+}
+
+.admin-container input::placeholder {
+  color: #666;
+}
+
+.admin-container button {
+  border: 0;
+  background-color: #393F4B;
+  color: white;
+  font-size: 1rem;
+}
+
+.main-admin-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.main-admin-buttons button {
+  margin: 10px 10px 0px 10px;
+  padding: 20px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.main-admin-buttons button:hover,
+.save-survey-button:hover {
+  color:#f59645;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+/* Misc */
+.dividerLine {
+  border-bottom: rgba(0, 0, 0, 0.2) solid;
+  padding: 20px 0;
+}
+
+/* *************************** FIND SURVEY *************************** */
+.company-and-survey-name-inputs {
+  display: flex;
+  margin: 20px auto;
+  width: auto;
+}
+
+.company-and-survey-name-inputs input {
+  font-size: 1rem;
+  padding: 10px 10px;
+  margin: 0 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display:block;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.company-and-survey-name-inputs .col{
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .company-and-survey-name-inputs input {
+    padding: 5px 5x;
+    min-width: 10% !important;
+  }
+  
+  .company-and-survey-name-inputs .col{
+    margin-right: 0px;
+  }
+}
+
+.search-input {
+  display: inline;
+}
+
+.company-and-survey-name-inputs-and-error {
+  display: flex;
+  flex-direction: column;
+}
+
+.validation-error-name-version-number {
+  width: 100%;
+  align-self: center;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.validation-error-name-version-number p {
+  color: red;
+  padding: 0;
+  font-size: 0.85rem;
+  align-self: center;
+}
+
+/* *************************** CREATE SURVEY *************************** */
+
+/* Left and Right Parts */
+.survey-selection-container {
+  display: flex;
+}
+
+/* Left Sidebar */
+.survey-selection-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: flex-start;
+  position: sticky;
+  top: 90px;
+  height: 100%; 
+  padding-top: 15px;
+}
+
+.survey-selection-sidebar button {
+  padding: 5px;
+  margin: 3px;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  background-color: #393F4B; 
+  color: white;
+  box-shadow: none;
+}
+
+.survey-selection-sidebar button:hover {
+  color: #f59645;
+}
+
+.survey-selection-sidebar .icons{
+  display: block;
+  font-size: 1.75rem;
+  font-weight: bold;
+  /*** If the following line is removed, if we click on the icon, the button doesn't work. */
+  pointer-events: none; 
+}
+
+@media screen and (max-width: 768px) {
+  .survey-selection-sidebar {
+    grid-template-columns: 1fr;
+  }
+  
+  .survey-selection-sidebar button {
+    padding: 3px;
+    width: 75px;
+    height: 75px;
+    font-size: 0.85rem;
+  }
+
+  .survey-selection-sidebar .icons {
+    font-size: 1.25rem;
+  }
+}
+
+/* Right Custom Part */
+.admin-question-component {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+  margin: 15px;
+  display: flex;
+  overflow: none;
+}
+
+.updated-copy-of-survey .admin-question-component {
+  width: 80%;
+  margin: 15px auto;
+}
+
+.admin-question-component label,
+.admin-question-component input,
+.admin-question-component select{
+  display: inline-block;
+  margin: 0px;
+  box-shadow: none !important;
+}
+
+.admin-question-component textarea{
+  outline: none;
+    padding: 10px !important;
+    height: 60px !important;
+    width: 98% !important;
+    color: black !important;
+    border: none;
+    border-radius: 10px;
+    box-shadow: none !important;
+}
+
+.admin-question-component.narrative-component textarea {
+  height: 98% !important;  
+}
+
+.admin-question-component.narrative-component textarea.narrative-text-area-input {
+  overflow: auto;
+}
+
+.narrative-text-area.editable {
+  overflow: hidden;
+}
+
+.admin-question-component input[type="radio"],
+.admin-question-component input[type="checkbox"] {
+  pointer-events: none;
+}
+
+.narrative-text-area {
+  width: 98%;
+  height: 100% !important;
+}
+
+.narrative-text-area-input {
+  white-space:break-spaces;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+textarea.disabled-textarea {
+  height: 20px !important;
+}
+
+.survey-selected-components {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.survey-selected-components input[type="radio"],
+.survey-selected-components input[type="checkbox"] {
+  width: 40px;
+}
+
+.survey-selected-components-background {
+  padding-top: 0;
+  height: 100%;
+}
+
+.survey-selected-components .intro-heading{
+  padding: 0px;
+}
+.survey-selected-components .intro-heading input{
+  width:98%;
+  padding: 10px 10px;
+  margin: 10px 0;
+  border: none;
+  box-sizing: border-box;
+  display:block;
+  border-radius: 10px;
+}
+.survey-selected-components .intro-heading label{
+font-weight: bold;  
+}
+.survey-selected-components .intro-heading input::placeholder{
+  align-items: center;
+}
+
+/* Bottom (save button) */
+.save-survey-button-and-link {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+	height: 90px;
+}
+
+.save-survey-button-and-link button {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.list-table table{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 70px;
+  color: #444;
+	height: 450px;
+}
+
+.list-table .survey-link {
+  overflow-wrap: anywhere;
+  color: #444;
+  font-weight: bold;
+}
+
+.data-table table{
+    margin-top: 20px;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 70px;
+    height: 300px;
+    overflow: scroll;
+	}
+  
+	.data-table {
+	overflow: scroll;
+}
+
+.master-data-table {
+    display: flex;
+    justify-content: center;
+}
+.question-list{
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  overflow: scroll;
+  margin-bottom: 20px;
+}
+
+.list-table th {
+  background-color: grey;
+  color:black !important;
+  font-weight: bolder;
+  padding: 2px 20px 2px 20px;
+}
+
+.list-table th,
+.list-table td,
+.question-list td {
+  border: 1px solid #17171a;
+  padding: 10px 15px;
+  color: #444;
+}
+
+.data-collected .obj{
+  text-align: start;
+}
+
+.data-table td{
+  border: 1px solid #cecfd5;
+  padding:2px 10px;
+}
+
+.data-table th{
+  background-color: grey;
+  color: white;
+  font-weight: bolder;
+  padding: 2px 5px 2px 5px;
+}
+
+.list-table h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.list-table a {
+  text-decoration: none;
+  color: #444;
+}
+
+.list-table tr:hover {
+  background-color: hsl(28, 90%, 72%) !important;
+}
+
+.data-table tr:hover {
+  background-color: hsl(28, 90%, 72%) !important;
+  color:black;
+  font-weight: bold;
+}
+
+.data-collected .upper-section{
+  padding: 10px 0px 0px 0px;
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	margin-bottom: 10px;
+}
+
+.data-collected .record-num{
+  margin-top: 20px;
+  margin-bottom: 10px;
+	border-radius: 8px;
+  background: #393F4B;
+  color: white;
+  padding:8px 8px;  
+}
+
+.data-collected .record-num span{
+  margin-left:10px;
+  color:#f59645;
+}
+
+.data-collected .button-row{
+display: flex;
+justify-content: center;
+}
+
+.top-buttons {
+	display: flex;
+  align-items: flex-end;
+}
+
+.data-collected .export-btn, .data-collected .table-btn{
+  border: 0;
+  background-color:  #393F4B;
+  color: white;
+  padding:6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bolder;
+  margin-bottom: 7px;
+  margin-left: 5px;
+}
+
+.data-collected .table-btn{
+  margin-left: 5px;
+}
+
+.data-collected .export-btn:hover,
+.data-collected .table-btn:hover{
+color:#f59645;
+}
+
+.data-collected .display{
+  margin-left:10px;
+}
+
+.existing-surveys-edit-column {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.list-table .existing-surveys-edit-icon,
+.data-collected .existing-surveys-edit-icon {
+  font-size:large;
+  border: none;
+  color:black;
+  background-color: inherit;
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+.list-table .existing-surveys-edit-icon[title]
+  :hover:after {
+  content: attr(title);
+}
+
+.question-and-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+.narrative-component .question-and-buttons {
+  height: 200px;
+  overflow: auto;
+}
+
+.question-and-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-border-line {
+  border-right: 0.5px #197e9c solid;
+  width: 100%;
+  padding-right: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.matrix .side-border-line {
+  overflow-x: auto;
+}
+
+.question-intro-container {
+  height: fit-content;
+}
+
+.admin-question-component .question-intro {
+  font-size: 1rem !important;
+  font-weight: bold;
+}
+
+.delete-option-button {
+  width: 65px !important;
+}
+
+/* .questionText is for the edit and save button when you are in the edit mode */
+.questionText {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-buttons-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-button button {
+  cursor: pointer;
+  background-color: white;
+  color: #197e9c;
+  padding: 0px 0px;
+  margin: 10px 0px 5px 10px;
+  text-align: left;
+  width: 80px;
+}
+.edit-button .add-option{
+  width: auto;
+}
+
+.slider-admin {
+  display: grid;
+  grid-template-columns: 3fr 9fr 1fr 1fr;
+  column-gap: 2em;
+  row-gap: 1em;
+  width: 100%;
+  line-height: 1em;
+  height: 40px;
+  margin: 5px 5px 5px 0;
+}
+
+.slider-admin-edit {
+	display: grid;
+	grid-template-columns: 1fr 1fr 9fr 1fr;
+}
+
+.slider-admin-edit button {
+  margin-right: 60px;
+}
+
+.slider-admin-edit input {
+  width: 250px !important;
+  padding: 10px !important;
+  background-color: #fff !important;
+  border: 1px solid #444 !important;
+}
+
+.slider-admin p {
+  font-size: 1rem;
+  height: auto;
+  font-size: 1em;
+  padding: 0px;
+  margin: auto 0;
+  text-align: start;
+}
+
+.slider-admin div {
+  margin: auto;
+}
+
+.slider-admin input {
+  outline: none;
+  background-color: rgb(244, 241, 241);
+  color: #444;
+  width: 4em;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  height: fit-content;
+  margin: auto;
+}
+
+.heading-and-image {
+  display: flex;
+}
+
+.intro-heading,
+.upload-image {
+  width: 100% !important;
+}
+
+.upload-image {
+	display: grid;
+	justify-items: center;
+	border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+  margin: 15px;
+	width: auto;
+	height: auto;
+	background-color: white;
+}
+
+ .upload-image h5 {
+	 font-size: 1.5em;
+	cursor: pointer;
+	border-radius: 10px;
+	padding: auto;
+}
+
+/* CHARTS */
+.chart-container {
+  margin-top: 20px;
+  width: 350px; 
+  height: 350px;
+}
+
+.checkboxes-other-responses p {
+  font-size: 0.75rem;
+  padding: 5px;
+}
+
+.data-visual-table button{
+	background-color: rgb(255, 255, 255);
+	font-size: 1.3em;
+	cursor: pointer;
+	border: none;	
+}
+
+.data-visual-table td {
+	border-radius: 2px;
+	border: 1.3px solid rgb(235, 235, 235);
+}
+
+.data-visual-table button:focus {
+	background-color: #77cdf5;
+}
+
+.data-text.obj {
+	font-size: 0.8em;
+}
+.chart-table table, th, td {
+  border: 1.5px solid rgb(175, 175, 175);
+	padding: 3px;
+}
+
+.chart-table table{
+  border-collapse:collapse;
+	margin-bottom: 10px;
+	border-radius: 8px;
+}
+
+.graph-section .lower-sec{
+ display: grid;
+ grid-template-columns: 1fr;
+ justify-items: center;
+ margin-right: 200px;
+}
+
+.select-survey select{
+	outline: none;
+	font-size: 1em;
+  color: #444;
+    padding: 8px 8px;
+		width: auto;
+		background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(214, 214, 214);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+  
+.graph-section .chart-table td{
+  font-size: smaller;
+}
+
+.graph-section .chart-table .text{
+  font-weight: bold;
+}
+
+.graph-section .chart-table{
+  display:flex;
+  align-items:center; 
+  justify-content: center;
+  width:100%;
+  /* remove everything below this, if pie charts table need to be below the charts */
+  margin-top:20px;  
+  margin-bottom: 40px;
+}
+
+.graph-section .pie{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+ }
+
+ .graph-section .ptable{
+  width: 200%;
+  margin-left:80px;
+ }
+ 

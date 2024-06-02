@@ -1,0 +1,41 @@
+/* ADJUST THESE IMPORT/FONT-FAMILY LINES TO CHANGE THE FONT THROUGHOUT THE APP */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* LOGO COLOURS
+color: #197e9c; MAIN BLUE
+color: #35c0c2; MAIN TEAL
+color: #f59645; MAIN ORANGE
+color: #bce6f8; Light blueish-grey
+color: #575759; Dark grey from logo text */
+
+html {
+  height: fit-content;
+}
+
+p {
+  font-size: 1rem;
+  padding: 2rem;
+  text-align: justify;
+}
+
+body {
+  font-size: 1rem;
+  background-color: #f3f3f3;
+  place-items: center;
+}
+
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -475px; /* -448 is good */
+  }
+}
