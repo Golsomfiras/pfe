@@ -1,4 +1,4 @@
-# Survey Management Project (June to August 2021)
+# Survey Management Project
 
 ## Table of Contents
 
@@ -25,7 +25,6 @@ This project also leverages a cloud-based instance of MongoDB for storing and re
 Admin portal:
 - login
 - modify his own password
-- select from eight pre-built survey question types
 - edit the question and response option text, as well as add or delete response options
 - delete questions from the survey
 - drag and drop questions to a different order and their numbering will automatically update
